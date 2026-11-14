@@ -1,0 +1,42 @@
+.feature-list > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.feature-list > ul > li {
+  border: 1px solid var(--dark-color);
+  border-radius: 8px;
+  padding: 24px;
+  background-color: var(--light-color);
+}
+
+.feature-list .feature-list-icon {
+  font-size: 40px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.feature-list .feature-list-text h3 {
+  margin: 0 0 8px;
+  font-size: var(--heading-font-size-s);
+}
+
+.feature-list .feature-list-text p {
+  margin: 0;
+}
+
+@media (width >= 600px) {
+  .feature-list > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .feature-list > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
