@@ -1,34 +1,34 @@
-# Your Project's Title...
-Your project's description...
+# AEM Landing Page (Edge Delivery Services)
 
-## Environments
-- Preview: https://main--aem-landing-page--meghana-kolipaka.aem.page/
-- Live: https://main--aem-landing-page--meghana-kolipaka.aem.live/
+A small marketing landing page built on Adobe's AEM Edge Delivery Services boilerplate, with two custom blocks.
 
-## Documentation
+## What I built
+- A landing page with a heading, a section of three feature cards, and a call-to-action banner.
+- `feature-list` block: shows features as a responsive grid of cards (written in JavaScript and CSS).
+- `cta-banner` block: shows a highlighted banner with a heading, a short line of text and a button (JavaScript and CSS).
+- The page itself is in `drafts/index.html`.
 
-Before using the aem-boilerplate, we recommend you to go through the documentation on https://www.aem.live/docs/ and more specifically:
-1. [Developer Tutorial](https://www.aem.live/developer/tutorial)
-2. [The Anatomy of a Project](https://www.aem.live/developer/anatomy-of-a-project)
-3. [Web Performance](https://www.aem.live/developer/keeping-it-100)
-4. [Markup, Sections, Blocks, and Auto Blocking](https://www.aem.live/developer/markup-sections-blocks)
+## Screenshot
+![Landing page](screenshots/landing-page.png)
 
-## Installation
+## How to run it locally
+You need Node.js installed.
 
-```sh
+```
 npm i
+npm install -g @adobe/aem-cli
+aem up --html-folder drafts --open /drafts/index
 ```
 
-## Linting
+The page opens in your browser.
 
-```sh
-npm run lint
-```
+## Challenges I faced
+- Connecting a content source through da.live gave a "not authorized" error, so I ran the page locally with the AEM CLI and a `drafts` folder instead.
+- The page showed the wrong content because an old `index.html` from another project was in my `drafts` folder. I found it with a Command Prompt check and replaced it with the correct file.
 
-## Local development
+## What I learned
+- Edge Delivery Services builds pages from blocks, and each block has its own JavaScript and CSS file.
+- How to run an AEM project locally with the AEM CLI and push it to GitHub.
 
-1. Create a new repository based on the `aem-boilerplate` template
-1. Add the [AEM Code Sync GitHub App](https://github.com/apps/aem-code-sync) to the repository
-1. Install the [AEM CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/aem-cli`
-1. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000`)
-1. Open the `aem-landing-page` directory in your favorite IDE and start coding :)
+## Credits
+Built on Adobe's boilerplate: https://github.com/adobe/aem-boilerplate
